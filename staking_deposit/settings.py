@@ -16,6 +16,7 @@ PRATER = 'prater'
 SEPOLIA = 'sepolia'
 ZHEJIANG = 'zhejiang'
 HOLESKY = 'holesky'
+MEING = 'meing'
 
 # Mainnet setting
 MainnetSetting = BaseChainSetting(
