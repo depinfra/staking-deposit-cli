@@ -37,6 +37,11 @@ ZhejiangSetting = BaseChainSetting(
 HoleskySetting = BaseChainSetting(
     NETWORK_NAME=HOLESKY, GENESIS_FORK_VERSION=bytes.fromhex('01017000'),
     GENESIS_VALIDATORS_ROOT=bytes.fromhex('9143aa7c615a7f7115e2b6aac319c03529df8242ae705fba9df39b79c59fa8b1'))
+# Meing setting
+MeingSetting = BaseChainSetting(
+    NETWORK_NAME=MEING, GENESIS_FORK_VERSION=bytes.fromhex('0x10000146'),
+    GENESIS_VALIDATORS_ROOT=bytes.fromhex('41840e5130b6100fe362e6aa26efd18a0882e8a72d489249229c3bca70242191'))
+
 
 
 ALL_CHAINS: Dict[str, BaseChainSetting] = {
@@ -46,6 +51,7 @@ ALL_CHAINS: Dict[str, BaseChainSetting] = {
     SEPOLIA: SepoliaSetting,
     ZHEJIANG: ZhejiangSetting,
     HOLESKY: HoleskySetting,
+    MEING: MeingSetting,
 }
 
 
