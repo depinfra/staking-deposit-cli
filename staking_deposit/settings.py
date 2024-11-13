@@ -17,6 +17,7 @@ SEPOLIA = 'sepolia'
 ZHEJIANG = 'zhejiang'
 HOLESKY = 'holesky'
 MEING = 'meing'
+DEP = 'depinfra'
 
 # Mainnet setting
 MainnetSetting = BaseChainSetting(
@@ -43,6 +44,11 @@ MeingSetting = BaseChainSetting(
     NETWORK_NAME=MEING, GENESIS_FORK_VERSION=bytes.fromhex('10000146'),
     GENESIS_VALIDATORS_ROOT=bytes.fromhex('41840e5130b6100fe362e6aa26efd18a0882e8a72d489249229c3bca70242191'))
 
+# Depinfra setting
+DepinfraSetting = BaseChainSetting(
+    NETWORK_NAME=MEING, GENESIS_FORK_VERSION=bytes.fromhex('10000146'),
+    GENESIS_VALIDATORS_ROOT=bytes.fromhex('b285cd0fae6b5c9578bcd2a0690ef85b0be7b700feebc37054d671aa823dac30'))
+
 
 
 ALL_CHAINS: Dict[str, BaseChainSetting] = {
@@ -53,6 +59,7 @@ ALL_CHAINS: Dict[str, BaseChainSetting] = {
     ZHEJIANG: ZhejiangSetting,
     HOLESKY: HoleskySetting,
     MEING: MeingSetting,
+    DEP: DepinfraSetting,
 }
 
 
