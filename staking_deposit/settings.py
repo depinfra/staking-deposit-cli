@@ -16,7 +16,6 @@ PRATER = 'prater'
 SEPOLIA = 'sepolia'
 ZHEJIANG = 'zhejiang'
 HOLESKY = 'holesky'
-MEING = 'meing'
 DEP = 'depinfra'
 
 # Mainnet setting
@@ -39,14 +38,9 @@ ZhejiangSetting = BaseChainSetting(
 HoleskySetting = BaseChainSetting(
     NETWORK_NAME=HOLESKY, GENESIS_FORK_VERSION=bytes.fromhex('01017000'),
     GENESIS_VALIDATORS_ROOT=bytes.fromhex('9143aa7c615a7f7115e2b6aac319c03529df8242ae705fba9df39b79c59fa8b1'))
-# Meing setting
-MeingSetting = BaseChainSetting(
-    NETWORK_NAME=MEING, GENESIS_FORK_VERSION=bytes.fromhex('10000146'),
-    GENESIS_VALIDATORS_ROOT=bytes.fromhex('41840e5130b6100fe362e6aa26efd18a0882e8a72d489249229c3bca70242191'))
-
 # Depinfra setting
 DepinfraSetting = BaseChainSetting(
-    NETWORK_NAME=MEING, GENESIS_FORK_VERSION=bytes.fromhex('10000146'),
+    NETWORK_NAME=DEP, GENESIS_FORK_VERSION=bytes.fromhex('10000146'),
     GENESIS_VALIDATORS_ROOT=bytes.fromhex('b285cd0fae6b5c9578bcd2a0690ef85b0be7b700feebc37054d671aa823dac30'))
 
 
@@ -58,12 +52,11 @@ ALL_CHAINS: Dict[str, BaseChainSetting] = {
     SEPOLIA: SepoliaSetting,
     ZHEJIANG: ZhejiangSetting,
     HOLESKY: HoleskySetting,
-    MEING: MeingSetting,
     DEP: DepinfraSetting,
 }
 
 
-def get_chain_setting(chain_name: str = MAINNET) -> BaseChainSetting:
+def get_chain_setting(chain_name: str = DEP) -> BaseChainSetting:
     return ALL_CHAINS[chain_name]
 
 
